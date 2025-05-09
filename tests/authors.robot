@@ -1,6 +1,7 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
+Library    DateTime
 Library    JSONLibrary
 Resource    ../resource/authors.resource
 
