@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Cadastro de Autores
+Documentation    Cadastro e Consulta de Autores
 Library    RequestsLibrary
 Library    Collections
 Library    JSONLibrary
@@ -21,7 +21,7 @@ ${LIST_LASTNAME}
 
 *** Keywords ***
 Adicionar um Autor com sucesso
-    ${AUTHORS_JSON}=    Load Json From File    livraria/config/payload/authors.json
+    ${AUTHORS_JSON}=    Load Json From File    config/payload/authors.json
 
     ${LIST_ID}=    Evaluate    random.choice(@{ID})
     Set To Dictionary    ${AUTHORS_JSON}    id=${LIST_ID}
@@ -74,3 +74,7 @@ Buscar um Autor por ID randomico de uma lista
 Buscar um Autor por ID 
     ${HEADERS}=    Create Dictionary    Content-type=application/json
     ${RESPONSE}=    GET    ${URL_BASE}api/v1/Authors/${ID_UNICO}    headers=${HEADERS}    expected_status=200
+
+Buscar uma lista de todos os Autor cadastrados
+    ${HEADERS}=    Create Dictionary    Content-type=application/json
+    ${RESPONSE}=    GET    ${URL_BASE}api/v1/Authors    headers=${HEADERS}    expected_status=200
