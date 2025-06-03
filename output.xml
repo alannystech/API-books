@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.3 on win32)" generated="2025-06-03T16:09:34.616087" rpa="false" schemaversion="5">
+<suite id="s1" name="Book" source="C:\Users\Utilizador\Documents\livraria\tests\book.robot">
+<test id="s1-t1" name="criar varios livros" line="11">
+<kw name="Montar Payload Do Livro" owner="book">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.745275" level="INFO">${BOOKS_JSON_PATH} = config/payload/books.json</msg>
+<var>${BOOKS_JSON_PATH}</var>
+<arg>${BOOKS_JSON_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.745275" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.745275" level="INFO">${ID} = 145</msg>
+<var>${ID}</var>
+<arg>random.choice(${LIST_ID})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.745275" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.745275" level="INFO">${TITLE} = A menina que não queria amar</msg>
+<var>${TITLE}</var>
+<arg>random.choice(${LIST_TITLE})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.745275" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.753337" level="INFO">${DESCRIPTION} = romance</msg>
+<var>${DESCRIPTION}</var>
+<arg>random.choice(${LIST_DESCRIPTION})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.745275" elapsed="0.008223"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.753498" level="INFO">${PAGE_COUNT} = 300</msg>
+<var>${PAGE_COUNT}</var>
+<arg>random.choice(${LIST_PAGE_COUNT})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.753498" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.753498" level="INFO">${EXCERPT} = Este é apenas um trecho do livro.</msg>
+<var>${EXCERPT}</var>
+<arg>random.choice(${LIST_EXCERPT})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.753498" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.753498" level="INFO">${PUBLISH_DATE} = 2023-07-10T00:00:00Z</msg>
+<var>${PUBLISH_DATE}</var>
+<arg>random.choice(${LIST_PUBLISH_DATE})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.753498" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.753498" level="INFO">${payload} = {'id': '145', 'title': 'A menina que não queria amar', 'description': 'romance', 'pageCount': '300', 'excerpt': 'Este é apenas um trecho do livro.', 'publishDate': '2023-07-10T00:00:00Z'}</msg>
+<var>${payload}</var>
+<arg>id=${ID}</arg>
+<arg>title=${TITLE}</arg>
+<arg>description=${DESCRIPTION}</arg>
+<arg>pageCount=${PAGE_COUNT}</arg>
+<arg>excerpt=${EXCERPT}</arg>
+<arg>publishDate=${PUBLISH_DATE}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.753498" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-03T16:09:37.753498" level="INFO">{'id': '145', 'title': 'A menina que não queria amar', 'description': 'romance', 'pageCount': '300', 'excerpt': 'Este é apenas um trecho do livro.', 'publishDate': '2023-07-10T00:00:00Z'}</msg>
+<arg>${payload}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-03T16:09:37.753498" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${payload}</value>
+<status status="PASS" start="2025-06-03T16:09:37.753498" elapsed="0.000000"/>
+</return>
+<status status="PASS" start="2025-06-03T16:09:37.745275" elapsed="0.008223"/>
+</kw>
+<status status="PASS" start="2025-06-03T16:09:37.736869" elapsed="0.016629"/>
+</test>
+<status status="PASS" start="2025-06-03T16:09:34.616087" elapsed="3.137411"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Book" id="s1" pass="1" fail="0" skip="0">Book</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-06-03T16:09:36.782941" level="WARN">Error in file 'C:\Users\Utilizador\Documents\livraria\resource\book.resource' on line 38: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
