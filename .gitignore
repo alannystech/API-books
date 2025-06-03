@@ -1,0 +1,9 @@
+_pycache_/
+*.pyc
+.env
+*.log
+.vscode/
+*.robot.xml
+output.xml
+report.html
+log.html
